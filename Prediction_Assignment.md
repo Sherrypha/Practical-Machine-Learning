@@ -32,7 +32,7 @@ To predict the __classe__ variable, we tried predicting with randomforests. Rand
 
 Although this method is slow and prone to overfitting, it is has a high accurary rate. 
 
-We fitted 52 feautures as predictors for the ___classe___ variable. The model final model had acuracy of about 98% which we are very comfortable with. Testing the model on our testing samples, the model was able to predict the classe of the barlifts with an accuracy of $\approx 99\% $ and an out-of-sample error of $\approx 99\% $
+We fitted 52 feautures as predictors for the ___classe___ variable. The model final model had acuracy of about 98% which we are very comfortable with. Testing the model on our testing samples, the model was able to predict the classe of the barlifts with an accuracy of $\approx 99\%$ and an out-of-sample error of $\approx 0.879$
 
 # Data Processing
 ## Get Data
@@ -99,7 +99,7 @@ dim(p_training); dim(p_testing);
 ```r
 # see Appendixs for processed data column names
 ```
-# Analysis and Predictipn
+# Analysis and Prediction
 
 ## Data Partitioning
 We will partition our data into a training data set (60% of the total cases) and a testing data set (40% of the total cases). This will allow us to estimate the out of sample error of our predictor. 
@@ -318,7 +318,7 @@ The data for this project come from this source: http://groupware.les.inf.puc-ri
 ## [159] "magnet_forearm_z"         "classe"
 ```
 
-## Processed Data Details
+## Processed Data Details 
 
 ```
 ##  [1] "roll_belt"            "pitch_belt"           "yaw_belt"            

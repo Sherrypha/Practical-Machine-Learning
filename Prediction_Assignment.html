@@ -243,7 +243,7 @@ div.tocify {
 <li>Grow multiple trees and vote</li>
 </ol>
 <p>Although this method is slow and prone to overfitting, it is has a high accurary rate.</p>
-<p>We fitted 52 feautures as predictors for the <strong><em>classe</em></strong> variable. The model final model had acuracy of about 98% which we are very comfortable with. Testing the model on our testing samples, the model was able to predict the classe of the barlifts with an accuracy of $99% $ and an out-of-sample error of $99% $</p>
+<p>We fitted 52 feautures as predictors for the <strong><em>classe</em></strong> variable. The model final model had acuracy of about 98% which we are very comfortable with. Testing the model on our testing samples, the model was able to predict the classe of the barlifts with an accuracy of <span class="math inline">\(\approx 99\%\)</span> and an out-of-sample error of <span class="math inline">\(\approx 0.879\)</span></p>
 </div>
 </div>
 <div id="data-processing" class="section level1">
@@ -290,8 +290,8 @@ dim(p_training); dim(p_testing);</code></pre>
 <pre class="r"><code># see Appendixs for processed data column names</code></pre>
 </div>
 </div>
-<div id="analysis-and-predictipn" class="section level1">
-<h1><span class="header-section-number">3</span> Analysis and Predictipn</h1>
+<div id="analysis-and-prediction" class="section level1">
+<h1><span class="header-section-number">3</span> Analysis and Prediction</h1>
 <div id="data-partitioning" class="section level2">
 <h2><span class="header-section-number">3.1</span> Data Partitioning</h2>
 <p>We will partition our data into a training data set (60% of the total cases) and a testing data set (40% of the total cases). This will allow us to estimate the out of sample error of our predictor.</p>
