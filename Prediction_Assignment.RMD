@@ -164,7 +164,7 @@ The data for this project come from this source: http://groupware.les.inf.puc-ri
 colnames(training)
 ```
 
-## Processed Data Details
+## Processed Data Details 
 ```{r cache=TRUE, echo=FALSE}
 colnames(p_training)
 ```
