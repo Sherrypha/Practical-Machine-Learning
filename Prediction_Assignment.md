@@ -14,15 +14,15 @@ output:
 
 
 
-#Executive Summary
+# Executive Summary
 
 The goal of this project, is to use data from accelerometers on the belt, forearm, arm, and dumbell of 6 participants that were asked to perform barbell lifts correctly and incorrectly in 5 different ways to predict the manner in which they did the exercise(This is the "classe" variable in the training set.)
 
-##Background
+## Background
 
 Using devices such as Jawbone Up, Nike FuelBand, and Fitbit it is now possible to collect a large amount of data about personal activity relatively inexpensively. These type of devices are part of the quantified self movement - a group of enthusiasts who take measurements about themselves regularly to improve their health, to find patterns in their behavior, or because they are tech geeks. One thing that people regularly do is quantify how much of a particular activity they do, but they rarely quantify how well they do it. See Appendix 4.1 for data source details
 
-##Summary of findings
+## Summary of findings
 
 To predict the __classe__ variable, we tried predicting with randomforests. RandomForests method 
 
@@ -34,8 +34,8 @@ Although this method is slow and prone to overfitting, it is has a high accurary
 
 We fitted 52 feautures as predictors for the ___classe___ variable. The model final model had acuracy of about 98% which we are very comfortable with. Testing the model on our testing samples, the model was able to predict the classe of the barlifts with an accuracy of $\approx 99\% $ and an out-of-sample error of $\approx 99\% $
 
-#Data Processing
-##Get Data
+# Data Processing
+## Get Data
 
 ```r
 #download project data set
@@ -53,7 +53,7 @@ testing<- read.csv("/data/pml-testing.csv",na.strings=c("NA","#DIV/0!",""))
 ```
 
 
-##Clean Data
+## Clean Data
 
 To tidy the data, 
 
@@ -99,9 +99,9 @@ dim(p_training); dim(p_testing);
 ```r
 # see Appendixs for processed data column names
 ```
-#Analysis and Predictipn
+# Analysis and Predictipn
 
-##Data Partitioning
+## Data Partitioning
 We will partition our data into a training data set (60% of the total cases) and a testing data set (40% of the total cases). This will allow us to estimate the out of sample error of our predictor. 
 
 ```r
@@ -122,11 +122,11 @@ dim(dp_training); dim(dp_testing);
 ## [1] 7846   53
 ```
 
-##Model Fitting
+## Model Fitting
 
 I would be using the random forest prediction model as it is best for __Accuracy__
 
-###Random Forest Model
+### Random Forest Model
 
 
 ```r
@@ -205,7 +205,7 @@ error<-1 - as.numeric(confusionMatrix(dp_testing$classe, predict_RandomForest)$o
 ```
 The accuracy of the model is 99.1%  and the estimated out-of-sample error is 0.879%
 
-##Predicting Model on the Test Data
+## Predicting Model on the Test Data
 
 ```r
 set.seed(123)
@@ -219,9 +219,9 @@ pred
 ```
 
 
-#Appendix
+# Appendix
 
-##Data Source
+## Data Source
 
 The training data for this project are available here:
 
@@ -233,7 +233,7 @@ The test data are available here:
 
 The data for this project come from this source: http://groupware.les.inf.puc-rio.br/har.
 
-##Preprocessed Data Details
+## Preprocessed Data Details
 
 ```
 ##   [1] "X"                        "user_name"               
@@ -318,7 +318,7 @@ The data for this project come from this source: http://groupware.les.inf.puc-ri
 ## [159] "magnet_forearm_z"         "classe"
 ```
 
-##Processed Data Details
+## Processed Data Details
 
 ```
 ##  [1] "roll_belt"            "pitch_belt"           "yaw_belt"            
@@ -341,10 +341,10 @@ The data for this project come from this source: http://groupware.les.inf.puc-ri
 ## [52] "magnet_forearm_z"     "classe"
 ```
 
-##Variable Importance Plots
+## Variable Importance Plots
 ![](Prediction_Assignment_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
 
-##Model correlation matrix 
+## Model correlation matrix 
 A plot of our prediction on our test data:dp_testing
 ![](Prediction_Assignment_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
 
