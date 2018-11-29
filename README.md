@@ -1,16 +1,3 @@
----
-title: "Prediction Assignment Writeup"
-author: "Sherifat A-Shitu"
-date: "27 November 2018"
-output:
-  html_document:
-    keep_md: yes
-    number_sections: yes
-    toc: yes
-    toc_float: yes
-  pdf_document:
-    toc: yes
----
 
 
 
